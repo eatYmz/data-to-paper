@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libegl1 \
     libgl1-mesa-glx \
     libxkbcommon0 \
+    libdbus-1-3 \
     texlive-latex-base \
     texlive-latex-extra \
     texlive-fonts-recommended \
