@@ -6,19 +6,21 @@ WORKDIR /usr/src/app/data-to-paper
 # Copy the current directory contents into the container at /usr/src/app
 COPY . .
 
-# Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
-RUN cd ./data_to_paper && pip install -e .
-
-# Install LaTeX and necessary packages
+# Install necessary libraries
 RUN apt-get update && apt-get install -y --no-install-recommends \
+    libdouble-conversion3 \
+    libpyside6-dev \
     texlive-latex-base \
     texlive-latex-extra \
     texlive-fonts-recommended \
     vim \
     nano \
     pandoc \
-&& rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt && \
+    pip install -e ./data_to_paper
 
 # Set the default command to run the script
 CMD ["python", "data_to_paper/data_to_paper/scripts/run.py"]
