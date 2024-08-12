@@ -21,6 +21,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libxcomposite1 \
     libxcursor1 \
     libxrandr2 \
+    libfontconfig1 \
+    libfreetype6 \
+    libxfixes3 \
+    libxtst6 \
+    libxdamage1 \
+    libxshmfence1 \
+    libxxf86vm1 \
+    libxinerama1 \
+    libgl1-mesa-dri \
+    libqt5gui5 \
+    libqt5core5a \
     texlive-latex-base \
     texlive-latex-extra \
     texlive-fonts-recommended \
