@@ -9,6 +9,8 @@ COPY . .
 # Install necessary libraries
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libdouble-conversion3 \
+    libegl1 \
+    libgl1-mesa-glx \
     texlive-latex-base \
     texlive-latex-extra \
     texlive-fonts-recommended \
