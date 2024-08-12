@@ -9,7 +9,6 @@ COPY . .
 # Install necessary libraries
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libdouble-conversion3 \
-    libpyside6-dev \
     texlive-latex-base \
     texlive-latex-extra \
     texlive-fonts-recommended \
