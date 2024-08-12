@@ -20,5 +20,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     pandoc \
 && rm -rf /var/lib/apt/lists/*
 
-# Set the default command to open a bash shell
-CMD ["bash"]
+# Set the default command to run the script
+CMD ["python", "data_to_paper/data_to_paper/scripts/run.py"]
